@@ -44,7 +44,8 @@ class callGraph():
 
 		#可以不用提前建cdepn2文件，直接指明就可以
 		#2.python处理.c.cdepn文件，只留下函数名，包括自定义和库文件的
-        output_file = open(os.getcwd()+"/data/"+"ass2.c.cdepn2", 'w').write(re.sub(r'\w+\.\w\:\w+|{|}', '', input_file.read()))
+        output_file = open(os.getcwd()+"/data/"+"ass2.c.cdepn2", 'w')\
+            .write(re.sub(r'\w+\.\w\:\w+|{|}', '', input_file.read()))
 
         f = open(os.getcwd()+"/data/"+"ass2.c.cdepn2")
         lines = f.readlines()
@@ -133,7 +134,8 @@ class callGraph():
             graph.push(list_node[self.temp])
         print(list_node[self.temp])
         #判断是否有该属性 match_one()。
-        if not graph.match_one(start_node=selector.select(u).first(),end_node=selector.select(v).first(),bidirectional=False):
+        if not graph.match_one(start_node=selector.select(u).first(),
+                               end_node=selector.select(v).first(),bidirectional=False):
             #不存在匹配关系，就添加call
             node_1_call_node2=Relationship(selector.select(u).first(), 'call', selector.select(v).first())
             #创建关系
