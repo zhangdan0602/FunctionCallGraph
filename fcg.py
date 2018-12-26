@@ -6,6 +6,7 @@ from py2neo import Graph,Node,Relationship,NodeSelector
 graph = Graph("http://localhost:7474", username="neo4j", password="123456")
 #图置为空
 graph.delete_all()
+import linecache
 import os
 import re
 import sys
@@ -109,6 +110,39 @@ class callGraph():
             graph.push(list_node[self.temp])
         print(list_node[self.temp])
 
+    # 添加节点的参数
+    def add_node_header(self, node_name, funHeader):
+        #节点是否为空
+        if selector.select(node_name).first() is None:
+            for i in range(len(list_node)):
+                # 查找u对应的节点的num
+                if node_name in list_node.get(i).labels():
+                    self.temp = i
+            graph.create(list_node[self.temp])
+            list_node[self.temp]['name'] = node_name
+            # 添加函数的参数作为节点的header
+            list_node[self.temp]['header'] = funHeader
+            # 修改节点的值
+            graph.push(list_node[self.temp])
+        print(list_node[self.temp])
+    #获得函数的参数的方法
+    def getHeader(self):
+        f = open(os.getcwd()+"/data/"+"ass2.c.cdepn")
+        lines = f.readlines()
+        for cline in lines:
+            if cline.startswith('F'):
+                # 忽略换行符
+                cline = cline.strip()
+                # 获取这一行内：后的数字
+                line_num = int(re.findall(r":(.+?)}", cline)[0])
+                # 获取函数名
+                node = re.findall(r"{(.+?)}", cline)[0]
+                # 去.c文件中查找这一行，将获取内容放到str
+                the_line = linecache.getline(os.getcwd()+"/data/"+"ass2.c", line_num)\
+                    .strip().replace('{', '')
+                # 添加节点，str到图中，传递参数方法：如果有该节点则直接加属性，没有则创建
+                cg.add_node_header(node, the_line)
+
     # 添加边【自定义函数之间】
     def add_edge(self, edge):
         u,v=edge
@@ -161,6 +195,8 @@ class callGraph():
         # 自定义函数组成的集合
         print(list_node)
 
+
+
     #得到函数调用图【会调用节点添加属性、添加关系的方法】
     def getFcg(self):
         f = open(os.getcwd()+"/data/"+"ass2.c.cdepn2")
@@ -183,6 +219,8 @@ if __name__ == '__main__':
     cg.getFlist()
     #调用初始化节点集合的方法
     cg.initial()
+    #调用得到函数参的方法
+    cg.getHeader()
     #调用生成函数调用图的方法
     cg.getFcg()
 
