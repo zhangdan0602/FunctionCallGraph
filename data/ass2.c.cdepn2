@@ -1,0 +1,65 @@
+F main 
+C main  DrawMap2
+C main  __builtin_puts
+C main  __builtin_puts
+C main  scanf
+C main  scanf
+C main  DrawMap
+C main  __builtin_puts
+C main  __builtin_puts
+C main  printf
+C main  printf
+C main  __builtin_puts
+C main  __builtin_puts
+C main  MaxInPoint
+C main  printf
+C main  MaxInPoint
+C main  __builtin_puts
+C main  __builtin_puts
+C main  scanf
+C main  scanf
+C main  printf
+C main  MaxInPoint
+C main  printf
+C main  __builtin_puts
+C main  __builtin_puts
+C main  scanf
+C main  scanf
+F line_intersect 
+F DrawMap2 
+C DrawMap2  __builtin_putchar
+C DrawMap2  __builtin_putchar
+C DrawMap2  __builtin_putchar
+C DrawMap2  __builtin_putchar
+C DrawMap2  __builtin_putchar
+C DrawMap2  __builtin_putchar
+C DrawMap2  __builtin_putchar
+C DrawMap2  __builtin_putchar
+C DrawMap2  MaxInPoint
+C DrawMap2  __builtin_putchar
+C DrawMap2  InBound
+F InBound 
+C InBound  line_intersect
+F DrawMap 
+C DrawMap  __builtin_putchar
+C DrawMap  __builtin_putchar
+C DrawMap  __builtin_putchar
+C DrawMap  __builtin_putchar
+C DrawMap  __builtin_putchar
+C DrawMap  __builtin_putchar
+C DrawMap  __builtin_putchar
+C DrawMap  __builtin_putchar
+C DrawMap  MaxInPoint
+F MaxInPoint 
+C MaxInPoint  Strength
+C MaxInPoint  Strength
+F Strength 
+C Strength  FSPL
+C Strength  Distance
+F FSPL 
+C FSPL  log10
+C FSPL  log10
+F Distance 
+C Distance  sqrt
+C Distance  pow
+C Distance  pow

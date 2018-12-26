@@ -1,0 +1,65 @@
+F {main} {ass2.c:182}
+C {main} {ass2.c:261} {DrawMap2}
+C {main} {ass2.c:261} {__builtin_puts}
+C {main} {ass2.c:261} {__builtin_puts}
+C {main} {ass2.c:261} {scanf}
+C {main} {ass2.c:261} {scanf}
+C {main} {ass2.c:261} {DrawMap}
+C {main} {ass2.c:261} {__builtin_puts}
+C {main} {ass2.c:261} {__builtin_puts}
+C {main} {ass2.c:261} {printf}
+C {main} {ass2.c:261} {printf}
+C {main} {ass2.c:261} {__builtin_puts}
+C {main} {ass2.c:261} {__builtin_puts}
+C {main} {ass2.c:261} {MaxInPoint}
+C {main} {ass2.c:261} {printf}
+C {main} {ass2.c:261} {MaxInPoint}
+C {main} {ass2.c:261} {__builtin_puts}
+C {main} {ass2.c:261} {__builtin_puts}
+C {main} {ass2.c:261} {scanf}
+C {main} {ass2.c:261} {scanf}
+C {main} {ass2.c:261} {printf}
+C {main} {ass2.c:261} {MaxInPoint}
+C {main} {ass2.c:261} {printf}
+C {main} {ass2.c:261} {__builtin_puts}
+C {main} {ass2.c:261} {__builtin_puts}
+C {main} {ass2.c:261} {scanf}
+C {main} {ass2.c:261} {scanf}
+F {line_intersect} {ass2.c:130}
+F {DrawMap2} {ass2.c:97}
+C {DrawMap2} {ass2.c:261} {__builtin_putchar}
+C {DrawMap2} {ass2.c:261} {__builtin_putchar}
+C {DrawMap2} {ass2.c:261} {__builtin_putchar}
+C {DrawMap2} {ass2.c:261} {__builtin_putchar}
+C {DrawMap2} {ass2.c:261} {__builtin_putchar}
+C {DrawMap2} {ass2.c:261} {__builtin_putchar}
+C {DrawMap2} {ass2.c:261} {__builtin_putchar}
+C {DrawMap2} {ass2.c:261} {__builtin_putchar}
+C {DrawMap2} {ass2.c:261} {MaxInPoint}
+C {DrawMap2} {ass2.c:261} {__builtin_putchar}
+C {DrawMap2} {ass2.c:261} {InBound}
+F {InBound} {ass2.c:85}
+C {InBound} {ass2.c:261} {line_intersect}
+F {DrawMap} {ass2.c:59}
+C {DrawMap} {ass2.c:261} {__builtin_putchar}
+C {DrawMap} {ass2.c:261} {__builtin_putchar}
+C {DrawMap} {ass2.c:261} {__builtin_putchar}
+C {DrawMap} {ass2.c:261} {__builtin_putchar}
+C {DrawMap} {ass2.c:261} {__builtin_putchar}
+C {DrawMap} {ass2.c:261} {__builtin_putchar}
+C {DrawMap} {ass2.c:261} {__builtin_putchar}
+C {DrawMap} {ass2.c:261} {__builtin_putchar}
+C {DrawMap} {ass2.c:261} {MaxInPoint}
+F {MaxInPoint} {ass2.c:47}
+C {MaxInPoint} {ass2.c:261} {Strength}
+C {MaxInPoint} {ass2.c:261} {Strength}
+F {Strength} {ass2.c:38}
+C {Strength} {ass2.c:261} {FSPL}
+C {Strength} {ass2.c:261} {Distance}
+F {FSPL} {ass2.c:34}
+C {FSPL} {ass2.c:261} {log10}
+C {FSPL} {ass2.c:261} {log10}
+F {Distance} {ass2.c:30}
+C {Distance} {ass2.c:261} {sqrt}
+C {Distance} {ass2.c:261} {pow}
+C {Distance} {ass2.c:261} {pow}
